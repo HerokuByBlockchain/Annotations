@@ -6,12 +6,15 @@ import { tap } from 'rxjs/operators';
 import { URL_PNG, LoadImageSuccess, LoadAnnotations, DrawImageAndAnnotationsButtonClicked } from '../annotation.actions';
 import { AnnotationService } from '../annotation.service';
 
+export const ROTATION = Math.PI * 0.25;
+export const START_ANGLE = 0;
+export const END_ANGLE = Math.PI * 2;
 
 @Component({
   selector: 'my-annotations',
   templateUrl: './my-annotations.component.html',
 })
-export class MyAnnotationsComponent {
+export class MyAnnotationsComponent {  
   protected http: HttpClient;
   protected annotations: Annotations;
   imagePNG: any;
@@ -71,13 +74,14 @@ export class MyAnnotationsComponent {
     // TODO fetch of annotations from store doesn't work properly at the moment
     //      and instead of 'this.annotationService.getStoredAnnotations()' statement above it should be following code statement applied
     //      'this.store.pipe(select(selectFetchedAnnotations)).subscribe(annotations => this.annotations = annotations);'
+    ctx.strokeStyle = 'blue';
     ctx.ellipse(this.annotations.annotations[0].x,
       this.annotations.annotations[0].y,
       this.annotations.annotations[0].radiusX,
       this.annotations.annotations[0].radiusY,
-      Math.PI * 0.25,
-      0,
-      Math.PI * 2);
+      ROTATION,
+      START_ANGLE,
+      END_ANGLE);
     ctx.stroke();
   }
 

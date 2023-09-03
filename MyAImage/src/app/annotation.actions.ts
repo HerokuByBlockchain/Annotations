@@ -1,7 +1,7 @@
 import { Action } from '@ngrx/store';
 import { Annotations } from './annotation/my-annotations.component';
 
-export const URL_PNG = 'https://image.dummyjson.com/256x256';
+export const URL_PNG = 'https://image.dummyjson.com/512x512';
 export const URL_ANNOTATION = 'https://dummyjson.com/http/200/%7B%22id%22:%22a1%22,%22radiusX%22:20,%22radiusY%22:25,%22x%22:50,%22y%22:60%7D';     
 
 export enum ActionTypes {
