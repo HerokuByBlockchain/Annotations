@@ -3,11 +3,13 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
 Github repository has been created under the link "https://github.com/HerokuByBlockchain/Annotations".
-The behaviour from the task description has been implemented, however there was a need to apply workaround mentioned in TODO comment lines 27-36, 53-55 and 71-73 in the "src > app > annotations > my-annotations.component.ts" component.
+The behaviour from the attached task description has been implemented, however there was a need to apply workaround mentioned in comment lines 30-39, 56-58 and 74-76 in the "src > app > annotations > my-annotations.component.ts" component.
 
-Furthermore in order to be able to draw the ellipse, annotation data need to contain 3 additional parameters, namely rotation, startAngle, endAngle. Those have been defined as constants in the "src > app > annotations > my-annotations.component.ts" and applied in line 77 to call the ellipse() function properly.
+Furthermore in order to be able to draw the ellipse, annotation data need to contain three additional parameters, namely rotation, startAngle, endAngle. Those have been defined as constants in the "src > app > annotations > my-annotations.component.ts" and adjusted in lines 82-84 to apply the ellipse() function properly.
 
-Also the annotation link "https://dummyjson.com/http/200/[{"id":"a1","radiusX":20,"radiusY":25,"x":50,"y":60" shouldn't contain the "http/200/[{" part and correct the "http/200/{" substring.
+Also the annotation link "https://dummyjson.com/http/200/[{"id":"a1","radiusX":20,"radiusY":25,"x":50,"y":60"
+shouldn't contain the "http/200/[{" part and correct the "http/200/{" substring.
+
 
 ## Development server
 
